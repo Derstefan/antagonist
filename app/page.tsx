@@ -1,4 +1,3 @@
-import Image from "next/image";
 import GameCardList from "./components/GameCardList";
 import { gameCardData } from "./data/GameCardData";
 

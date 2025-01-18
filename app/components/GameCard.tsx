@@ -14,16 +14,7 @@ interface CardProps {
   arrayElemente: SubElement[];
 }
 
-// Map for SVG icons
-const svgMap: Record<string, React.JSX.Element> = {
-  feuer: <svg className="element-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red"><path d="M12 2c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8z"/></svg>,
-  wasser: <svg className="element-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="blue"><path d="M12 2c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8z"/></svg>,
-  erde: <svg className="element-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="brown"><path d="M12 2c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8z"/></svg>,
-  wind: <svg className="element-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="lightblue"><path d="M12 2c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8z"/></svg>,
-  licht: <svg className="element-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="yellow"><path d="M12 2c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8z"/></svg>,
-  dunkelheit: <svg className="element-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12 2c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8z"/></svg>,
-  mystik: <svg className="element-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="purple"><path d="M12 2c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8z"/></svg>,
-};
+
 const elementColors: { [key: string]: string } = {
     feuer: "bg-red-500",
     wasser: "bg-blue-500",
