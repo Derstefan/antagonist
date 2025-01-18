@@ -20,14 +20,14 @@ const elementColors: { [key: string]: string } = {
     wasser: "bg-blue-500",
     erde: "bg-green-600",
     wind: "bg-teal-500",
-    licht: "bg-yellow-400",
+    licht: "bg-yellow-500",
     dunkelheit: "bg-gray-800",
     mystik: "bg-purple-500",
   };
   
   const GameCard: React.FC<CardProps> = ({ name, elemente,bild, arrayElemente }) => {
     return (
-      <div className=" bg-amber-500 shadow-lg rounded-lg p-6 text-center transition-transform transform hover:scale-105 w-72 h-96 flex flex-col justify-between">
+      <div className=" bg-orange-300 shadow-lg rounded-lg p-6 text-center transition-transform transform hover:scale-105 w-72 h-96 flex flex-col justify-between">
         <h2 className="text-2xl font-bold text-gray-800 mb-1">{name}</h2>
         <div className="flex justify-center gap-2 mb-4">
           {elemente.map((element, index) => (

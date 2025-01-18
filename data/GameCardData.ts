@@ -24,7 +24,7 @@ export const gameCardData: GameCard[] = [
     {
         name: "Magmaherz",
         elemente: ["feuer", "erde", "dunkelheit"],
-        bild: "",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/tckmujzdoc0zv0are4ts",
         arrayElemente: [
             { elements: ["wasser"], exact: true },
             { elements: ["licht", "wasser", "wind"] }
@@ -59,9 +59,9 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        name: "Seelenverschlinger",
+        name: "gefräßige Welle",
         elemente: ["dunkelheit", "wind", "erde", "mystik"],
-        bild: "",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/dcdwqugdwyzmjpmcklly",
         arrayElemente: [
             { elements: ["licht"], exact: false },
             { elements: ["feuer", "licht"] }
@@ -88,7 +88,7 @@ export const gameCardData: GameCard[] = [
     {
         name: "Himmelszorn",
         elemente: ["wind", "licht", "feuer", "mystik"],
-        bild: "",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/e95kr1jmcpd26vg4ptig",
         arrayElemente: [
             { elements: ["erde"], exact: true },
             { elements: ["wasser", "dunkelheit"] }
@@ -133,18 +133,18 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        name: "Erdenwächter",
+        name: "Fels",
         elemente: ["erde", "dunkelheit"],
-        bild: "",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/ih1cngyohuhi6oikhart",
         arrayElemente: [
             { elements: ["licht"], exact: true },
             { elements: ["wasser"] }
         ]
     },
     {
-        name: "Urzeitmonolith",
+        name: "Thron der Eitelkeit",
         elemente: ["erde", "mystik"],
-        bild: "",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/eno86iwljtvtrxtj6ckl",
         arrayElemente: [
             { elements: ["wasser", "licht"], exact: false },
             { elements: ["wind"] }
@@ -153,7 +153,7 @@ export const gameCardData: GameCard[] = [
     {
         name: "Baum des Lebens",
         elemente: ["erde", "wasser", "licht"],
-        bild: "",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/cspqdukpkd4zzkuf7lsl",
         arrayElemente: [
             { elements: ["dunkelheit", "dunkelheit"], exact: true },
             { elements: ["wind", "feuer"] }
@@ -178,9 +178,9 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        name: "Klinge des Phönix",
+        name: "Kerze der Hoffnung",
         elemente: ["feuer", "licht", "wind"],
-        bild: "",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/jdzorozzs7kyqbrbnpol",
         arrayElemente: [
             { elements: ["wasser"], exact: true },
             { elements: ["wind", "erde", "dunkelheit"] }
