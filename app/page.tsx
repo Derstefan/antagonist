@@ -1,5 +1,5 @@
-import GameCardList from "./components/GameCardList";
-import { gameCardData } from "./data/GameCardData";
+import GameCardList from "../components/GameCardList";
+import { gameCardData } from "../data/GameCardData";
 
 export default function Home() {
   return (
