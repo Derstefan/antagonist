@@ -4,9 +4,9 @@ import GameCard from "./GameCard";
 // Define the type for the data array
 interface CardData {
   name: string;
-  elemente: string[];
+  elements: string[];
   bild: string;
-  arrayElemente: { elements: string[]; exact?: boolean }[];
+  weakness: { elements: string[]; exact?: boolean }[];
 }
 
 interface CardListProps {
@@ -21,8 +21,8 @@ const GameCardList: React.FC<CardListProps> = ({ data }) => {
           key={index}
           name={card.name}
           bild={card.bild}
-          elemente={card.elemente}
-          arrayElemente={card.arrayElemente}
+          elements={card.elements}
+          weakness={card.weakness}
         />
       ))}
     </div>

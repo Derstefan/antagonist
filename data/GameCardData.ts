@@ -6,184 +6,203 @@ export interface SubArray {
 
 export interface GameCard {
     name: string;
-    elemente: string[];
+    elements: string[];
     bild: string;
-    arrayElemente: SubArray[];
+    weakness: SubArray[];
 }
 
 export const gameCardData: GameCard[] = [
     {
+        id: 1,
         name: "Ritter der Ewigen Glut",
-        elemente: ["feuer", "licht"],
+        elements: ["f", "l"],
         bild: "",
-        arrayElemente: [
-            { elements: ["wasser"], exact: true },
-            { elements: ["wind", "wasser", "licht"] }
+        weakness: [
+            { elements: ["w"], exact: true },
+            { elements: ["a", "w", "l"] }
         ]
     },
     {
+        id: 2,
         name: "Magmaherz",
-        elemente: ["feuer", "erde", "dunkelheit"],
+        elements: ["f", "e", "d"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/tckmujzdoc0zv0are4ts",
-        arrayElemente: [
-            { elements: ["wasser"], exact: true },
-            { elements: ["licht", "wasser", "wind"] }
+        weakness: [
+            { elements: ["w"], exact: true },
+            { elements: ["l", "w", "a"] }
         ]
     },
     {
+        id: 3,
         name: "Inferno des Himmels",
-        elemente: ["feuer", "wind", "licht"],
+        elements: ["f", "a", "l"],
         bild: "",
-        arrayElemente: [
-            { elements: ["wasser", "erde"], exact: false },
-            { elements: ["wind", "wasser", "dunkelheit"] }
+        weakness: [
+            { elements: ["w", "e"] },
+            { elements: ["a", "w", "d"] }
         ]
     },
     {
+        id: 4,
         name: "Kristalllanze",
-        elemente: ["licht", "wind"],
+        elements: ["l", "a"],
         bild: "",
-        arrayElemente: [
-            { elements: ["dunkelheit"], exact: true },
-            { elements: ["feuer", "wasser"] }
+        weakness: [
+            { elements: ["d"], exact: true },
+            { elements: ["f", "w"] }
         ]
     },
     {
+        id: 5,
         name: "Tiefenlord",
-        elemente: ["wasser", "dunkelheit", "mystik", "licht"],
+        elements: ["w", "d", "m", "l"],
         bild: "",
-        arrayElemente: [
-            { elements: ["licht", "licht"], exact: true },
-            { elements: ["feuer"] },
-            { elements: ["erde", "licht", "wind"] }
+        weakness: [
+            { elements: ["l", "l"], exact: true },
+            { elements: ["f"] },
+            { elements: ["e", "l", "a"] }
         ]
     },
     {
+        id: 6,
         name: "gefräßige Welle",
-        elemente: ["dunkelheit", "wind", "erde", "mystik"],
+        elements: ["d", "a", "e", "m"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/dcdwqugdwyzmjpmcklly",
-        arrayElemente: [
-            { elements: ["licht"], exact: false },
-            { elements: ["feuer", "licht"] }
+        weakness: [
+            { elements: ["l"] },
+            { elements: ["f", "l"] }
         ]
     },
     {
+        id: 7,
         name: "Moor der Verlorenen",
-        elemente: ["erde", "wasser"],
+        elements: ["e", "w"],
         bild: "",
-        arrayElemente: [
-            { elements: ["licht", "licht"], exact: true },
-            { elements: ["feuer", "wind", "licht"] }
+        weakness: [
+            { elements: ["l", "l"], exact: true },
+            { elements: ["f", "a", "l"] }
         ]
     },
     {
+        id: 8,
         name: "Klagelied der Tiefen",
-        elemente: ["wasser", "licht"],
+        elements: ["w", "l"],
         bild: "",
-        arrayElemente: [
-            { elements: ["dunkelheit", "dunkelheit"], exact: true },
-            { elements: ["feuer"] }
+        weakness: [
+            { elements: ["d", "d"], exact: true },
+            { elements: ["f"] }
         ]
     },
     {
+        id: 9,
         name: "Himmelszorn",
-        elemente: ["wind", "licht", "feuer", "mystik"],
+        elements: ["a", "l", "f", "m"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/e95kr1jmcpd26vg4ptig",
-        arrayElemente: [
-            { elements: ["erde"], exact: true },
-            { elements: ["wasser", "dunkelheit"] }
+        weakness: [
+            { elements: ["e"], exact: true },
+            { elements: ["w", "d"] }
         ]
     },
     {
+        id: 10,
         name: "Wintermahlstrom",
-        elemente: ["wind", "wasser"],
+        elements: ["a", "w"],
         bild: "",
-        arrayElemente: [
-            { elements: ["feuer"], exact: true },
-            { elements: ["erde", "feuer"] },
-            { elements: ["licht", "dunkelheit", "mystik"] }
+        weakness: [
+            { elements: ["f"], exact: true },
+            { elements: ["e", "f"] },
+            { elements: ["l", "d", "m"] }
         ]
     },
     {
+        id: 11,
         name: "Himmelsschwinge",
-        elemente: ["wind", "licht"],
+        elements: ["a", "l"],
         bild: "",
-        arrayElemente: [
-            { elements: ["dunkelheit", "licht"], exact: false },
-            { elements: ["wasser", "wind", "feuer"] }
+        weakness: [
+            { elements: ["d", "l"] },
+            { elements: ["w", "a", "f"] }
         ]
     },
     {
-        name: "Windklinge",
-        elemente: ["wind", "mystik", "feuer"],
+        id: 12,
+        name: "aklinge",
+        elements: ["a", "m", "f"],
         bild: "",
-        arrayElemente: [
-            { elements: ["wasser"], exact: true },
-            { elements: ["licht", "erde", "dunkelheit"] }
+        weakness: [
+            { elements: ["w"], exact: true },
+            { elements: ["l", "e", "d"] }
         ]
     },
     {
+        id: 13,
         name: "Summende Legion",
-        elemente: ["wind", "erde", "licht", "mystik"],
+        elements: ["a", "e", "l", "m"],
         bild: "",
-        arrayElemente: [
-            { elements: ["dunkelheit"], exact: false },
-            { elements: ["feuer"] },
-            { elements: ["wind", "wasser", "dunkelheit"] }
+        weakness: [
+            { elements: ["d"] },
+            { elements: ["f"] },
+            { elements: ["a", "w", "d"] }
         ]
     },
     {
+        id: 14,
         name: "Fels",
-        elemente: ["erde", "dunkelheit"],
+        elements: ["e", "d"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/ih1cngyohuhi6oikhart",
-        arrayElemente: [
-            { elements: ["licht"], exact: true },
-            { elements: ["wasser"] }
+        weakness: [
+            { elements: ["l"], exact: true },
+            { elements: ["w"] }
         ]
     },
     {
+        id: 15,
         name: "Thron der Eitelkeit",
-        elemente: ["erde", "mystik"],
+        elements: ["e", "m"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/eno86iwljtvtrxtj6ckl",
-        arrayElemente: [
-            { elements: ["wasser", "licht"], exact: false },
-            { elements: ["wind"] }
+        weakness: [
+            { elements: ["w", "l"] },
+            { elements: ["a"] }
         ]
     },
     {
+        id: 16,
         name: "Baum des Lebens",
-        elemente: ["erde", "wasser", "licht"],
+        elements: ["e", "w", "l"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/cspqdukpkd4zzkuf7lsl",
-        arrayElemente: [
-            { elements: ["dunkelheit", "dunkelheit"], exact: true },
-            { elements: ["wind", "feuer"] }
+        weakness: [
+            { elements: ["d", "d"], exact: true },
+            { elements: ["a", "f"] }
         ]
     },
     {
-        name: "Chroniken des Lichts",
-        elemente: ["licht", "mystik"],
+        id: 17,
+        name: "Chroniken des ls",
+        elements: ["l", "m"],
         bild: "",
-        arrayElemente: [
-            { elements: ["dunkelheit"], exact: true },
-            { elements: ["feuer", "wasser", "wind"] }
+        weakness: [
+            { elements: ["d"], exact: true },
+            { elements: ["f", "w", "a"] }
         ]
     },
     {
+        id: 18,
         name: "Schleier der Täuschung",
-        elemente: ["mystik", "dunkelheit"],
+        elements: ["m", "d"],
         bild: "",
-        arrayElemente: [
-            { elements: ["licht", "wasser"], exact: false },
-            { elements: ["wind"] }
+        weakness: [
+            { elements: ["l", "w"]},
+            { elements: ["a"] }
         ]
     },
     {
+        id: 19,
         name: "Kerze der Hoffnung",
-        elemente: ["feuer", "licht", "wind"],
+        elements: ["f", "l", "a"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/jdzorozzs7kyqbrbnpol",
-        arrayElemente: [
-            { elements: ["wasser"], exact: true },
-            { elements: ["wind", "erde", "dunkelheit"] }
+        weakness: [
+            { elements: ["w"], exact: true },
+            { elements: ["a", "e", "d"] }
         ]
     }
 ];

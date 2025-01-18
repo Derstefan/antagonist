@@ -9,28 +9,28 @@ interface SubElement {
 // Define the type for card data
 interface CardProps {
   name: string;
-  elemente: string[];
+  elements: string[];
   bild: string;
-  arrayElemente: SubElement[];
+  weakness: SubElement[];
 }
 
 
 const elementColors: { [key: string]: string } = {
-    feuer: "bg-red-500",
-    wasser: "bg-blue-500",
-    erde: "bg-green-600",
-    wind: "bg-teal-500",
-    licht: "bg-yellow-500",
-    dunkelheit: "bg-gray-800",
-    mystik: "bg-purple-500",
+    f: "bg-red-500",
+    w: "bg-blue-500",
+    e: "bg-green-600",
+    a: "bg-teal-500",
+    l: "bg-yellow-500",
+    d: "bg-gray-800",
+    m: "bg-purple-500",
   };
   
-  const GameCard: React.FC<CardProps> = ({ name, elemente,bild, arrayElemente }) => {
+  const GameCard: React.FC<CardProps> = ({ name, elements,bild, weakness }) => {
     return (
       <div className=" bg-orange-300 shadow-lg rounded-lg p-6 text-center transition-transform transform hover:scale-105 w-72 h-96 flex flex-col justify-between">
         <h2 className="text-2xl font-bold text-gray-800 mb-1">{name}</h2>
         <div className="flex justify-center gap-2 mb-4">
-          {elemente.map((element, index) => (
+          {elements.map((element, index) => (
             <div
               key={index}
               className={`w-7 h-7 flex items-center justify-center rounded-full text-yellow ${elementColors[element]}`}
@@ -46,7 +46,7 @@ const elementColors: { [key: string]: string } = {
         />
         <div>
           <ul className="mt-2 text-gray-600">
-            {arrayElemente.map((array, index) => (
+            {weakness.map((array, index) => (
               <li key={index} className="mt-1 flex items-center gap-2">
                 <div className="flex gap-1">
                     {array.exact !== undefined && (
