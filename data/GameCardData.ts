@@ -6,25 +6,28 @@ export interface SubArray {
 
 export interface GameCard {
     name: string;
+    type: string;
     elements: string[];
     bild: string;
     weakness: SubArray[];
 }
 
+
+
 export const gameCardData: GameCard[] = [
     {
-        id: 1,
         name: "Ritter der Ewigen Glut",
-        elements: ["f", "l"],
-        bild: "",
+        type: "attacking",
+        elements: ["f", "f", "f"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/pjb4dsp2gmwnlwanaktw",
         weakness: [
-            { elements: ["w"], exact: true },
-            { elements: ["a", "w", "l"] }
+            { elements: ["w","w"]},
+            { elements: ["l", "l", "l"] }
         ]
     },
     {
-        id: 2,
         name: "Magmaherz",
+        type: "environment",
         elements: ["f", "e", "d"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/tckmujzdoc0zv0are4ts",
         weakness: [
@@ -33,39 +36,43 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        id: 3,
         name: "Inferno des Himmels",
-        elements: ["f", "a", "l"],
-        bild: "",
+        type: "environment",
+
+        elements: ["f", "f", "f","a"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/h9ni15nolmevqdqtdcov",
         weakness: [
-            { elements: ["w", "e"] },
-            { elements: ["a", "w", "d"] }
+            { elements: ["w", "w","w","w"] },
+            { elements: ["e", "e","e","e"] },
+            { elements: ["m"] }
         ]
     },
     {
-        id: 4,
-        name: "Kristalllanze",
-        elements: ["l", "a"],
-        bild: "",
+        name: "Lehm Golem",
+        type: "attacking",
+        elements: ["e", "e", "e"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/cvtmttyh3c6blh43cpvy",
         weakness: [
-            { elements: ["d"], exact: true },
-            { elements: ["f", "w"] }
+            { elements: ["w","w"] },
+            { elements: ["f", "f","f"] },
+            { elements: ["m","m"] }
+
         ]
     },
     {
-        id: 5,
-        name: "Tiefenlord",
-        elements: ["w", "d", "m", "l"],
-        bild: "",
+        name: "Kobolt der Flammen",
+        type: "attacking",
+        elements: ["f"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/jpjuxra3qwk484ssmd4y",
         weakness: [
-            { elements: ["l", "l"], exact: true },
-            { elements: ["f"] },
-            { elements: ["e", "l", "a"] }
+            { elements: ["w"]},
+            { elements: ["f","f"] },
+            { elements: ["e","e"] }
         ]
     },
     {
-        id: 6,
         name: "gefräßige Welle",
+        type: "attacking",
         elements: ["d", "a", "e", "m"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/dcdwqugdwyzmjpmcklly",
         weakness: [
@@ -74,28 +81,19 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        id: 7,
         name: "Moor der Verlorenen",
-        elements: ["e", "w"],
-        bild: "",
+        type: "environment",
+        elements: ["e", "w","d"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/vmj1xzm2hjffuutrbemc",
         weakness: [
-            { elements: ["l", "l"], exact: true },
-            { elements: ["f", "a", "l"] }
+            { elements: ["l", "l"]},
+            { elements: ["e", "e", "e"] }
         ]
     },
     {
-        id: 8,
-        name: "Klagelied der Tiefen",
-        elements: ["w", "l"],
-        bild: "",
-        weakness: [
-            { elements: ["d", "d"], exact: true },
-            { elements: ["f"] }
-        ]
-    },
-    {
-        id: 9,
         name: "Himmelszorn",
+        type: "attacking",
+
         elements: ["a", "l", "f", "m"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/e95kr1jmcpd26vg4ptig",
         weakness: [
@@ -104,50 +102,31 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        id: 10,
-        name: "Wintermahlstrom",
-        elements: ["a", "w"],
-        bild: "",
-        weakness: [
-            { elements: ["f"], exact: true },
-            { elements: ["e", "f"] },
-            { elements: ["l", "d", "m"] }
-        ]
-    },
-    {
-        id: 11,
         name: "Himmelsschwinge",
-        elements: ["a", "l"],
-        bild: "",
+        type: "attacking",
+
+        elements: ["f", "l"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/n1pb7csoviqgtigimqz6",
         weakness: [
-            { elements: ["d", "l"] },
-            { elements: ["w", "a", "f"] }
+            { elements: ["w", "w"] },
+            { elements: ["e", "e", "e"] }
         ]
     },
     {
-        id: 12,
-        name: "aklinge",
-        elements: ["a", "m", "f"],
-        bild: "",
+        name: "Feuerbeschwörung",
+        type: "environment",
+
+        elements: ["f"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/k4ze2b4z3esnzi881snk",
         weakness: [
-            { elements: ["w"], exact: true },
-            { elements: ["l", "e", "d"] }
+            { elements: ["w"]},
+            { elements: ["e","e"] },
+            { elements: ["l","l"] }
         ]
     },
     {
-        id: 13,
-        name: "Summende Legion",
-        elements: ["a", "e", "l", "m"],
-        bild: "",
-        weakness: [
-            { elements: ["d"] },
-            { elements: ["f"] },
-            { elements: ["a", "w", "d"] }
-        ]
-    },
-    {
-        id: 14,
         name: "Fels",
+        type: "attacking",
         elements: ["e", "d"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/ih1cngyohuhi6oikhart",
         weakness: [
@@ -156,18 +135,20 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        id: 15,
         name: "Thron der Eitelkeit",
+        type: "environment",
+
         elements: ["e", "m"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/eno86iwljtvtrxtj6ckl",
         weakness: [
-            { elements: ["w", "l"] },
+            { elements: ["w", "l"], exact: true  },
             { elements: ["a"] }
         ]
     },
     {
-        id: 16,
         name: "Baum des Lebens",
+        type: "environment",
+
         elements: ["e", "w", "l"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/cspqdukpkd4zzkuf7lsl",
         weakness: [
@@ -176,33 +157,213 @@ export const gameCardData: GameCard[] = [
         ]
     },
     {
-        id: 17,
-        name: "Chroniken des ls",
-        elements: ["l", "m"],
-        bild: "",
+        name: "Chroniken des Lichts",
+        type: "environment",
+
+        elements: ["l", "l"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/y5e8j45joifu2tcrqnan",
         weakness: [
-            { elements: ["d"], exact: true },
-            { elements: ["f", "w", "a"] }
+            { elements: ["d","d","d"] },
+            { elements: ["f"] },
+            { elements: ["w", "w"] }
+
         ]
     },
     {
-        id: 18,
-        name: "Schleier der Täuschung",
-        elements: ["m", "d"],
-        bild: "",
+        name: "Bienenschwarm",
+        type: "attacking",
+        elements: ["a", "e"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/yaevqij9xu2unx5dow42",
         weakness: [
-            { elements: ["l", "w"]},
-            { elements: ["a"] }
+            { elements: ["f"]},
+            { elements: ["w","w"] },
+            { elements: ["d"] }
         ]
     },
     {
-        id: 19,
         name: "Kerze der Hoffnung",
+        type: "environment",
+
         elements: ["f", "l", "a"],
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/jdzorozzs7kyqbrbnpol",
         weakness: [
             { elements: ["w"], exact: true },
             { elements: ["a", "e", "d"] }
         ]
-    }
+    },
+    {
+        name: "Böe",
+        type: "environment",
+
+        elements: ["a"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/k4ze2b4z3esnzi881snk",
+        weakness: [
+            { elements: ["f"]},
+            { elements: ["e","e"] },
+        ]
+    },
+    {
+        name: "Greif",
+        type: "environment",
+
+        elements: ["a","a"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/k4ze2b4z3esnzi881snk",
+        weakness: [
+            { elements: ["f","f","f"]},
+            { elements: ["e","e"] },
+            { elements: ["l","l"] }
+        ]
+    },
+    {
+        name: "Sirene",
+        type: "attacking",
+
+        elements: ["w","w","w","w","d"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/lzrvyohn9mqm7u98zhlx",
+        weakness: [
+            { elements: ["f","f","f"]},
+            { elements: ["e","e","e"] },
+            { elements: ["l","l"] }
+        ]
+    },
+     {
+        name: "Eissplitter",
+        type: "attacking",
+
+        elements: ["w"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/k4ze2b4z3esnzi881snk",
+        weakness: [
+            { elements: ["f"]},
+            { elements: ["e","e"] },
+            { elements: ["l","l"] }
+        ]
+    },
+     {
+        name: "Lawine",
+        type: "attacking",
+
+        elements: ["e","e","e"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/k4ze2b4z3esnzi881snk",
+        weakness: [
+            { elements: ["w","w","w"]},
+            { elements: ["a","a"] },
+            { elements: ["m"] }
+        ]
+    },
+    {
+        name: "Zentauer",
+        type: "attacking",
+
+        elements: ["e", "e"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/k4ze2b4z3esnzi881snk",
+        weakness: [
+            { elements: ["f","f"]},
+            { elements: ["d","d"] }
+        ]
+    },
+    {
+        name: "Verblendung",
+        type: "environment",
+
+        elements: ["l"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/k4ze2b4z3esnzi881snk",
+        weakness: [
+            { elements: ["l","l","l"]},
+            { elements: ["d","d"] },        ]
+    },
+    {
+        name: "Mönch",
+        type: "attacking",
+
+        elements: ["l", "l", "l","e"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/wxvzqydutg5nqa2vgnyc",
+        weakness: [
+            { elements: ["f","f","f"]},
+            { elements: ["d","d","d"] },
+            { elements: ["w","w"] }
+        ]
+    },
+    {
+        name: "Wunder",
+        type: "environment",
+
+        elements: ["l", "l", "l","l","l"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/nmzgndpoif6c4p0xnssa",
+        weakness: [
+            { elements: ["m"]},
+            { elements: ["w","d","d"], exact: true },
+
+        ]
+    },
+    {
+        name: "Schrecken der Tiefe",
+        type: "attacking",
+
+        elements: ["d", "e"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/ok2ltxpkzg2q11kdsnlw",
+        weakness: [
+            { elements: ["l"]},
+            { elements: ["a","a"] },
+            { elements: ["f","f"] } 
+        ]
+    },
+    {
+        name: "Untoter Krieger",
+        type: "attacking",
+
+        elements: ["d", "d"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/p4fizqawejhbkqrg9mux",
+        weakness: [
+            { elements: ["f","f"]},
+            { elements: ["l","l"] }
+        ]
+    },
+    {
+        name: "Geisterschiff",
+        type: "attacking",
+
+        elements: ["d", "d", "d", "w"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/ghjfdjwhuqr389cwjzcn",
+        weakness: [
+            { elements: ["l","l","l"]},
+            { elements: ["e","e","e","e"] },
+            { elements: ["a","a","f","f"] }
+        ]
+    },
+    {
+        name: "Vampierfest",
+        type: "attacking",
+
+        elements: ["d", "d", "d", "d"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/ddraii8wn0k8or8h2maz",
+        weakness: [
+            { elements: ["l","l","l","l"]},
+            { elements: ["f","f","f","f"] },
+            { elements: ["l","f"], exact: true }
+
+        ]
+    },
+    {
+        name: "Spiegel",
+        type: "attacking",
+
+        elements: ["m", "l"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/acapf4fjoc8stqf2kvei",
+        weakness: [
+            { elements: ["m","m"]},
+            { elements: ["d","d"] },
+            { elements: ["l","l"] }
+        ]
+    },
+    {
+        name: "Hexenkreis",
+        type: "attacking",
+
+        elements: ["m", "m", "m", "e"],
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/xezzbut53dzrhtjekj40",
+        weakness: [
+            { elements: ["f","f"]},
+            { elements: ["d","d","d"] }
+        ]
+    },
 ];
