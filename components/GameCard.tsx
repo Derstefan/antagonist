@@ -3,6 +3,8 @@ import React from "react";
 
 interface CardProps {
   card: CardData;
+  size?: "small" | "medium";
+  color?: string;
 }
 
 const elementColors: { [key: string]: string } = {
@@ -15,29 +17,58 @@ const elementColors: { [key: string]: string } = {
   "d": "bg-gray-800",
   "m": "bg-purple-500",
 };
-const GameCard: React.FC<CardProps> = ({card}) => {
-  const { name, elements, weakness, bild,type } = card;
+
+const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color}) => {
+  const { name, elements, weakness, bild, type } = card;
+
+  // Determine styles based on the size prop
+  const cardSizeStyles = size === "small" ? {
+    card: "w-56 h-94 p-4", // Smaller width and height, less padding
+    title: "text-xl", // Smaller title font size
+    element: "w-6 h-6 text-sm", // Smaller element circles
+    image: "h-28", // Smaller image height
+    weaknessElement: "w-5 h-5 text-xs", // Smaller weakness element circles
+  } : {
+    card: "w-72 h-118 p-6", // Default size
+    title: "text-2xl", // Default title font size
+    element: "w-7 h-7 text-base", // Default element circles
+    image: "h-38", // Default image height
+    weaknessElement: "w-6 h-6 text-sm", // Default weakness element circles
+  };
+
   return (
-    <div className="bg-orange-300 shadow-lg rounded-lg p-6 text-center transition-transform transform hover:scale-105 w-72 h-118 flex flex-col justify-between" onClick={() => {window.location.href = `/cards/${card.id}`}}>
+    <div
+      className={`${color? color: "bg-orange-300"} shadow-lg rounded-lg text-center transition-transform transform hover:scale-105 flex flex-col justify-between ${cardSizeStyles.card}`}
+      onClick={() => { window.location.href = `/cards/${card.id}` }}
+    >
+      {/* Card Title */}
+      <h2 className={`font-bold text-gray-800 mb-1 ${cardSizeStyles.title}`}>
+        {name}
+      </h2>
 
-      <h2 className="text-2xl font-bold text-gray-800 mb-1">{name}</h2>
-
+      {/* Card Elements */}
       <div className="flex justify-center gap-2 mb-4">
         {Array.from(elements).map((element, index) => (
           <div
             key={index}
-            className={`w-7 h-7 flex items-center justify-center rounded-full text-yellow ${elementColors[element]}`}
+            className={`flex items-center justify-center rounded-full text-yellow ${elementColors[element]} ${cardSizeStyles.element}`}
           >
             {element.charAt(0).toUpperCase()}
           </div>
         ))}
-          <span className="text-2xl font-bold text-gray-200 mb-1 ml-2">{type === "attacking" ? " X" : ""}</span>
+        <span className={`font-bold text-gray-200 mb-1 ml-2 ${cardSizeStyles.title}`}>
+          {type === "attacking" ? " X" : ""}
+        </span>
       </div>
+
+      {/* Card Image */}
       <img
         src={bild || "https://via.placeholder.com/150"}
         alt={name}
-        className="w-full h-38 object-cover rounded mb-4"
+        className={`w-full object-cover rounded mb-4 ${cardSizeStyles.image}`}
       />
+
+      {/* Card Weaknesses */}
       <div>
         <ul className="mt-2 text-gray-600">
           {weakness.map((weaknessStr, index) => {
@@ -52,7 +83,7 @@ const GameCard: React.FC<CardProps> = ({card}) => {
                   {Array.from(elements).map((subElement, subIndex) => (
                     <div
                       key={subIndex}
-                      className={`w-6 h-6 flex items-center justify-center rounded-full text-xs text-white ${elementColors[subElement]}`}
+                      className={`flex items-center justify-center rounded-full text-white ${elementColors[subElement]} ${cardSizeStyles.weaknessElement}`}
                     >
                       {subElement.charAt(0).toUpperCase()}
                     </div>
@@ -66,6 +97,5 @@ const GameCard: React.FC<CardProps> = ({card}) => {
     </div>
   );
 };
-
 
 export default GameCard;
