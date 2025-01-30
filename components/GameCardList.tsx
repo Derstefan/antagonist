@@ -2,14 +2,9 @@
 
 import React, { useState } from "react";
 import GameCard from "./GameCard";
+import { CardData } from "@/data/GameCardData";
 
 // Define the type for the data array
-interface CardData {
-  name: string;
-  elements: string[];
-  bild: string;
-  weakness: { elements: string[]; exact?: boolean }[];
-}
 
 interface CardListProps {
   data: CardData[];
@@ -80,14 +75,14 @@ const GameCardList: React.FC<CardListProps> = ({ data }) => {
     // Filter by tier
     if (tier === "1") {
       filteredData = filteredData.filter(
-        (card) => card.elements.length >= 1 && card.elements.length <= 2
+        (card) => card.elements.length >= 1 && card.elements.length <= 1
       );
     } else if (tier === "2") {
       filteredData = filteredData.filter(
-        (card) => card.elements.length >= 3 && card.elements.length <= 4
+        (card) => card.elements.length >= 2 && card.elements.length <= 2
       );
     } else if (tier === "3") {
-      filteredData = filteredData.filter((card) => card.elements.length >= 5);
+      filteredData = filteredData.filter((card) => card.elements.length >= 3);
     }
 
     // Filter by selected elements with AND logic
@@ -102,6 +97,7 @@ const GameCardList: React.FC<CardListProps> = ({ data }) => {
 
   return (
     <div>
+
       <div className="controls flex flex-wrap justify-center gap-4 mb-6">
         <button
           className="bg-gray-500 text-white py-2 px-4 rounded flex items-center hover:bg-gray-600"
@@ -145,9 +141,9 @@ const GameCardList: React.FC<CardListProps> = ({ data }) => {
           onChange={(e) => filterByTier(e.target.value)}
         >
           <option value="all">All Tiers</option>
-          <option value="1">1. Tier (1-2 Elements)</option>
-          <option value="2">2. Tier (3-4 Elements)</option>
-          <option value="3">3. Tier (5+ Elements)</option>
+          <option value="1">1. Tier </option>
+          <option value="2">2. Tier </option>
+          <option value="3">3. Tier </option>
         </select>
         
         {/* Color Filter Button */}
@@ -217,10 +213,7 @@ const GameCardList: React.FC<CardListProps> = ({ data }) => {
         {sortedData.map((card, index) => (
           <GameCard
             key={index}
-            name={card.name}
-            bild={card.bild}
-            elements={card.elements}
-            weakness={card.weakness}
+            card={card}
           />
         ))}
       </div>
