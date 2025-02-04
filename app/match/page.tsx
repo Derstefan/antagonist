@@ -74,7 +74,7 @@ export default function GameBoardPage() {
   const player2Elements = countElements(player2Cards);
 
   // Zustände für Filter/Sortierung der verfügbaren Karten
-  const [availableCards, setAvailableCards] = useState<CardData[]>(gameCardData);
+  const [availableCards] = useState<CardData[]>(gameCardData);
   const [sortedAvailableCards, setSortedAvailableCards] = useState<CardData[]>(gameCardData);
   const [isAscending, setIsAscending] = useState(true);
   const [tierFilter, setTierFilter] = useState("all");
