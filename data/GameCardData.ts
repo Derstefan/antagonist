@@ -19,7 +19,7 @@ export const gameCardData: CardData[] = [
         type: "attacking",
         elements: "ff",
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/pjb4dsp2gmwnlwanaktw",
-        weakness: ["ww", "lll"]
+        weakness: ["ww", "ll"]
     },
     {
         id: 1,
@@ -47,7 +47,7 @@ export const gameCardData: CardData[] = [
         elements: "ee",
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/cvtmttyh3c6blh43cpvy",
         weakness: [
-            "ww", "m"
+            "wa", "m"
         ]
     },
     {
@@ -57,17 +57,17 @@ export const gameCardData: CardData[] = [
         elements: "f",
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/jpjuxra3qwk484ssmd4y",
         weakness: [
-            "w", "ee"
+            "w", "e"
         ]
     },
     {
         id: 5,
-        name: "gefräßige Welle",
+        name: "Welle",
         type: "attacking",
-        elements: "w",
-        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/dcdwqugdwyzmjpmcklly",
+        elements: "ww",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/v1738617566/wave2_r0nzbi.jpg",
         weakness: [
-            "l", "e"
+            "lm", "ee"
         ]
     },
     {
@@ -331,10 +331,10 @@ export const gameCardData: CardData[] = [
         id: 31,
         name: "Lichtblitz",
         type: "attacking",
-        elements: "l",
+        elements: "la",
         bild: "https://res.cloudinary.com/dyouat9fl/image/upload/f_auto,q_auto/v1/antagonist/shhowgxcqkhabhmrpumf",
         weakness: [
-            "e","a"
+            "ee","a"
         ]
     },
     {
@@ -406,5 +406,214 @@ export const gameCardData: CardData[] = [
         weakness: [
             "f","w"
         ]
+    },
+    {
+        id: 39,
+        name: "Sonnenaufgang",
+        type: "environment",
+        elements: "l",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/v1738617579/sunrise_jn4lse.webp",
+        weakness: [
+            "wa","m"
+        ]
+    },
+    {
+        id: 40,
+        name: "Bärenkraft",
+        type: "attacking",
+        elements: "e",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617577/bear_mrtajg.webp",
+        weakness: [
+            "f","w"
+        ]
+    },
+    {
+        id: 41,
+        name: "Träne der Trauer",
+        type: "environment",
+        elements: "w",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617576/waterdrop_cxotdg.webp",
+        weakness: [
+            "dd","w"
+        ]
+    },
+    {
+        id: 42,
+        name:"Hügel der Weitsicht",
+        type: "environment",
+        elements: "e",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617576/hill_f7za2l.webp",
+        weakness: [
+            "f","a"
+        ]
+    },
+    {
+        id: 43,
+        name:"Nebel der Zwietracht",
+        type: "environment",
+        elements: "ad",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617575/fogoffear_ilen6q.webp",
+        weakness: [
+            "f","aa"
+        ]
+    },
+    {
+        id: 44,
+        name: "Tanz der Feuerbeschwörung",
+        type: "attacking",
+        elements: "f",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738620044/firedance_mof4xr.webp",
+        weakness: [
+            "w","e"
+        ]
+    },
+    {
+        id:45,
+        name: "Willenskraft",
+        type: "attacking",
+        elements: "ef",
+        bild: "https://res.cloudinary.com/dyouat9fl/image/upload/v1738617573/erdspalt_c8yayn.webp",
+        weakness: [
+            "ww","ll"
+        ]        
+    },
+    {   id: 46,
+        name:"Wissen der Ewigkeit",
+        type: "environment",
+        elements: "m",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617572/wisdom_bgyqty.jpg",
+        weakness: [
+            "ff","dd"
+        ]
+    },
+    {
+        id: 47,
+        name: "Teppich der fernen Weite",
+        type: "environment",
+        elements: "am",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617571/carpet_dpwlql.jpg",
+        weakness: [
+            "ff","ee"
+        ]
+    },
+    {
+        id: 48,
+        name: "Flackernde Flamme",
+        type: "attacking",
+        elements: "f",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617570/torch_auducx.jpg",
+        weakness: [
+            "w","e"
+        ]
+    },
+    {
+        id: 49,
+        name: "Wolkenbruch",
+        type: "environment",
+        elements: "aw",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617569/rainy_cloud_cpgptc.jpg",
+        weakness: [
+            "ll","aa"
+        ]
+    },
+    {
+        id: 50,
+        name: "Rauch der Verwirrung",
+        type: "environment",
+        elements: "f",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617568/steam_fseerx.jpg",
+        weakness: [
+            "a","l"
+        ]
+    },
+    {
+        id: 51,
+        name:"Quelle der Reinheit",
+        type: "environment",
+        elements: "wl",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617567/spring_c3j6ci.jpg",
+        weakness: [
+            "dd","we"
+        ]
+    },
+    {
+        id: 52,
+        name:"Mondlicht",
+        type: "environment",
+        elements: "ld",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617566/moonlight_dnrtmb.jpg",
+        weakness: [
+            "ll","af"
+        ]
+    },
+    {
+        id: 53,
+        name:"Rätsel der Ahnen",
+        type: "environment",
+        elements: "m",
+        bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617563/riddle_ay6ed4.jpg",
+        weakness: [
+            "ll","ff"
+        ]
     }
+,{
+    id: 54,
+    name:"Windsprössling",
+    type: "environment",
+    elements: "a",
+    bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617564/sprout_kbaowt.jpg",
+    weakness: [
+        "f","d"
+    ]
+},
+{
+    id: 55,
+    name:"Kern der Bosheit",
+    type: "environment",
+    elements: "fd",
+    bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617563/darkcore_hhjq4d.jpg",
+    weakness: [
+        "ww","lll"
+    ]
+}
+,{
+    id: 56,
+    name:"Kugel der Weissagung",
+    type: "environment",
+    elements: "lm",
+    bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617561/future_utizlh.jpg",
+    weakness: [
+        "ww","d"
+    ]
+},
+{
+    id: 57,
+    name:"Ritual der Rachsucht",
+    type: "environment",
+    elements: "ddd",
+    bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617560/darkritual_kvz7zy.jpg",
+    weakness: [
+        "lll","ww"
+    ]
+},
+{
+    id: 58,
+    name:"Eisdrache des Nordens",
+    type: "attacking",
+    elements: "wwa",
+    bild:"https://res.cloudinary.com/dyouat9fl/image/upload/v1738617561/waterdragon_aqvt3z.jpg",
+    weakness: [
+        "fff","mm"
+    ]
+},
+{
+    id: 59,
+    name:"Krieger des Feuers",
+    type: "attacking",
+    elements: "ff",
+    bild: "https://res.cloudinary.com/dyouat9fl/image/upload/v1738617560/firewarrior_laiwv5.jpg",
+    weakness: [
+        "w","ll"
+    ]
+},
 ];

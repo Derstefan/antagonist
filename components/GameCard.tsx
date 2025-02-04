@@ -42,7 +42,7 @@ const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color}) => {
       onClick={() => { window.location.href = `/cards/${card.id}` }}
     >
       {/* Card Title */}
-      <h2 className={`font-bold text-gray-800 mb-1 ${cardSizeStyles.title}`}>
+      <h2 className={`font-bold text-gray-800 mb-1  ${cardSizeStyles.title}`}>
         {name}
       </h2>
 
@@ -51,12 +51,12 @@ const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color}) => {
         {Array.from(elements).map((element, index) => (
           <div
             key={index}
-            className={`flex items-center justify-center rounded-full text-yellow ${elementColors[element]} ${cardSizeStyles.element}`}
+            className={`flex items-center justify-center rounded-full text-yellow shadow-xxl shadow-[2px_4px_15px_rgba(0,0,0,0.4)] ${elementColors[element]} ${cardSizeStyles.element}`}
           >
             {element.charAt(0).toUpperCase()}
           </div>
         ))}
-        <span className={`font-bold text-gray-200 mb-1 ml-2 ${cardSizeStyles.title}`}>
+        <span className={`font-bold text-gray-100 mb-1 ml-2 ${cardSizeStyles.title}  text-4xl`}>
           {type === "attacking" ? " X" : ""}
         </span>
       </div>
@@ -75,7 +75,7 @@ const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color}) => {
             const exactMatch = weaknessStr.startsWith("=");
             const elements = exactMatch ? weaknessStr.slice(1) : weaknessStr;
             return (
-              <li key={index} className="mt-1 flex items-center gap-2">
+              <li key={index} className="mt-1 flex items-center gap-2 ">
                 <div className="flex gap-1">
                   {exactMatch && (
                     <span className="text-sm text-gray-500">=</span>
@@ -83,7 +83,7 @@ const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color}) => {
                   {Array.from(elements).map((subElement, subIndex) => (
                     <div
                       key={subIndex}
-                      className={`flex items-center justify-center rounded-full text-white ${elementColors[subElement]} ${cardSizeStyles.weaknessElement}`}
+                      className={`flex items-center justify-center rounded-full text-white shadow-xxl shadow-[2px_4px_15px_rgba(0,0,0,0.4)] ${elementColors[subElement]} ${cardSizeStyles.weaknessElement}`}
                     >
                       {subElement.charAt(0).toUpperCase()}
                     </div>

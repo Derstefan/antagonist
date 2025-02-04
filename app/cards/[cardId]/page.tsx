@@ -6,6 +6,22 @@ import Link from "next/link"; // For creating a Home button
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
+
+function isMultisetSubset(subset: string, superset: string): boolean {
+  const freq: { [char: string]: number } = {};
+  for (const char of superset) {
+    freq[char] = (freq[char] || 0) + 1;
+  }
+  for (const char of subset) {
+    if (!freq[char]) {
+      return false;
+    }
+    freq[char]--;
+  }
+  return true;
+}
+
+
 export default function Home() {
   const params = useParams(); // Get the dynamic route parameters
   const cardId = Array.isArray(params.cardId) ? params.cardId[0] : params.cardId; // Ensure cardId is a string
@@ -18,33 +34,31 @@ export default function Home() {
     return <div>Card not found</div>;
   }
 
-  // get all cards
-    // Get all countered cards
-    const counteredCards = gameCardData.filter((otherCard) => {
-      // Check if the other card has a weakness that matches the current card's elements
-      return otherCard.weakness.some((weakness) => {
-        if (weakness.startsWith("=")) {
-          // Exact match: the weakness must match the current card's elements exactly
-          return weakness.slice(1) === card.elements;
-        } else {
-          // Partial match: the weakness must be a subset of the current card's elements
-          return Array.of(weakness).every((char) => card.elements.includes(char));
-        }
-      });
+  const counteredCards = gameCardData.filter((otherCard) => {
+    return otherCard.weakness.some((w: string) => {
+      if (w.startsWith("=")) {
+        // Exact match: Die Weakness muss exakt den Elementen der aktuellen Karte entsprechen.
+        return w.slice(1) === card.elements;
+      } else {
+        // Partial match: Die Weakness (als Multiset) muss in den Elementen der aktuellen Karte enthalten sein.
+        return isMultisetSubset(w, card.elements);
+      }
     });
-
-    const counteringCards = gameCardData.filter((otherCard) => {
-      // Check if the other card has a weakness that matches the current card's elements
-      return card.weakness.some((weakness) => {
-        if (weakness.startsWith("=")) {
-          // Exact match: the weakness must match the current card's elements exactly
-          return weakness.slice(1) === otherCard.elements;
-        } else {
-          // Partial match: the weakness must be a subset of the current card's elements
-          return Array.of(weakness).every((char) => otherCard.elements.includes(char));
-        }
-      });
+  });
+  
+  // Karten, die die aktuelle Karte "countering" (d.h. andere Karten, bei denen die Weakness der aktuellen
+  // Karte in deren Elementen enthalten ist)
+  const counteringCards = gameCardData.filter((otherCard) => {
+    return card.weakness.some((weakness: string) => {
+      if (weakness.startsWith("=")) {
+        // Exact match: Die Weakness muss exakt den Elementen der anderen Karte entsprechen.
+        return weakness.slice(1) === otherCard.elements;
+      } else {
+        // Partial match: Die Weakness (als Multiset) muss in den Elementen der anderen Karte enthalten sein.
+        return isMultisetSubset(weakness, otherCard.elements);
+      }
     });
+  });
 
       // Get cards that are neither countering nor countered
   const neutralCards = gameCardData.filter(

@@ -140,10 +140,10 @@ const GameCardList: React.FC<CardListProps> = ({ data }) => {
           value={tierFilter}
           onChange={(e) => filterByTier(e.target.value)}
         >
-          <option value="all">All Tiers</option>
-          <option value="1">1. Tier </option>
-          <option value="2">2. Tier </option>
-          <option value="3">3. Tier </option>
+          <option value="all">alle Stufen</option>
+          <option value="1">1. Stufe </option>
+          <option value="2">2. Stufe </option>
+          <option value="3">3. Stufe </option>
         </select>
         
         {/* Color Filter Button */}
