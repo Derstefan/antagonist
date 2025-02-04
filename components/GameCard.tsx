@@ -5,6 +5,7 @@ interface CardProps {
   card: CardData;
   size?: "small" | "medium";
   color?: string;
+  clickable?: boolean;
 }
 
 const elementColors: { [key: string]: string } = {
@@ -18,7 +19,7 @@ const elementColors: { [key: string]: string } = {
   "m": "bg-purple-500",
 };
 
-const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color}) => {
+const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color,clickable = "true"}) => {
   const { name, elements, weakness, bild, type } = card;
 
   // Determine styles based on the size prop
@@ -39,7 +40,7 @@ const GameCard: React.FC<CardProps> = ({ card, size = "medium" ,color}) => {
   return (
     <div
       className={`${color? color: "bg-orange-300"} shadow-lg rounded-lg text-center transition-transform transform hover:scale-105 flex flex-col justify-between ${cardSizeStyles.card}`}
-      onClick={() => { window.location.href = `/cards/${card.id}` }}
+      onClick={() => {if(clickable) window.location.href = `/cards/${card.id}` }}
     >
       {/* Card Title */}
       <h2 className={`font-bold text-gray-800 mb-1  ${cardSizeStyles.title}`}>
